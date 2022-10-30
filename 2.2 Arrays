@@ -1,0 +1,88 @@
+// Ex 1.
+
+const arrA = ['a', 'b', 'c'];
+const arrB = ['a', 'b', 'c', 'd'];
+
+const intersection = arrA.filter(x => arrB.includes(x));
+
+console.log(intersection);
+
+
+
+// Ex. 2
+
+const numbers = [1,4,-6,23,-1,0];
+let sum = 0
+
+
+numbers.forEach((item, index, arr) => {
+if (item > 0) {
+sum += item;
+} 
+});
+
+console.log(sum);
+
+
+
+// Ex. 3
+
+const numbers = [true, false, "123", "75"];
+let sum = 0
+
+numbers.forEach((item, index, arr) => {
+if (typeof(item) === "number") {
+sum += item;
+} 
+});
+
+console.log(sum);
+
+// Ex. 4
+
+const numbers = [3, 4, 9];
+
+const newArr = numbers.map(calcEvenOdd);
+
+function calcEvenOdd(a) {
+let n = 3;
+if (a % 2 === 1) {
+a += n * 2;
+} else if (a % 2 === 0) {
+a -= n * 2;
+}
+return a;
+}
+
+console.log(newArr);
+
+
+// Ex 5.
+
+
+const numbers = [1, 3, 3, 1, 10];
+let sum = 0
+
+
+numbers.forEach((item, index, arr) => {
+if (item % 2 === 0) {
+sum += item * item;
+} else if (item % 2 === 1) {
+ sum += Math.sqrt(item); 
+}
+ 
+});
+
+console.log(sum);
+
+
+
+
+// Ex. 6
+
+const arr = [1, 2, 3, 4];
+const cumulativeSum = [];
+arr.reduce((a,b,i) => {
+return cumulativeSum[i] = a+b;
+}, 0)
+console.log(cumulativeSum);
