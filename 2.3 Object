@@ -1,0 +1,29 @@
+// 1
+
+const evaluationRecords = [];
+
+function findScores (evaluations) {
+for(let i = 0; i < evaluations.length; i++) {
+evaluationRecords.push(evaluations[i].score);
+evaluationRecords.sort((a,b) => a - b );
+}
+return evaluationRecords[0];
+}
+
+console.log(findScores(evaluations));
+
+
+// 2
+
+const sortedarray = evaluations.sort((a,b) => a.score - b.score);
+
+console.log(sortedarray[0].studentName)
+
+// 3
+const studentswithscoresover60 = evaluations.filter(checkScores);
+function checkScores(evaluations) {
+  return evaluations.score > 60;
+}
+
+console.log(studentswithscoresover60);
+
